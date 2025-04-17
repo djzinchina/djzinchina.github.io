@@ -38,4 +38,4 @@ Here we name them as W1, W2, and W3.
 
 #### Forecast works
 
-1. [LiteBIRD Science Goals and Forecasts: constraining isotropic cosmic birefringence](LiteBIRD Science Goals and Forecasts: constraining isotropic cosmic birefringence)
+1. [LiteBIRD Science Goals and Forecasts: constraining isotropic cosmic birefringence](https://arxiv.org/abs/2503.22322)
