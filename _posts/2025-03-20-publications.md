@@ -1,7 +1,7 @@
 ---
 title: Publication List
 date: 2025-03-20 22:10:00 +0800
-categories: [Blogging, About me]
+categories: [About me]
 tags: [Publications]     # TAG names should always be lowercase
 ---
 
