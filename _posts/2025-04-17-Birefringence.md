@@ -16,8 +16,8 @@ Note that, for each work, there are several points worthy of special notice: How
 Here we name them as W1, W2, and W3.
 
 1. [Simultaneous determination of the cosmic birefringence and miscalibrated polarisation angles from CMB experiments](https://arxiv.org/abs/1904.12440)
-2. [Determination of miscalibrated polarization angles from observed CMB and foreground EB power spectra: Application to partial-sky observation](http://arxiv.org/abs/2002.03572)
-3. [Simultaneous determination of the cosmic birefringence and miscalibrated polarization angles II: Including cross frequency spectra](http://arxiv.org/abs/2006.15982). 
+2. [Determination of miscalibrated polarization angles from observed CMB and foreground EB power spectra: Application to partial-sky observation](https://arxiv.org/abs/2002.03572)
+3. [Simultaneous determination of the cosmic birefringence and miscalibrated polarization angles II: Including cross frequency spectra](https://arxiv.org/abs/2006.15982). 
 
 - They do not use real CMB data, but simulations to validate the method.
 - They use d1s1 model in their sky simulations.
@@ -32,9 +32,9 @@ Here we name them as W1, W2, and W3.
 #### WMAP or Planck results
 
 1. [New Extraction of the Cosmic Birefringence from the Planck 2018 Polarization Data](https://arxiv.org/abs/2011.11254)
-2. [Cosmic Birefringence from Planck Data Release 4](http://arxiv.org/abs/2201.07682)
-3. [Improved Constraints on Cosmic Birefringence from the WMAP and Planck Cosmic Microwave Background Polarization Data](http://arxiv.org/abs/2205.13962)
-4. [Cosmoglobe DR1 results. II. Constraints on isotropic cosmic birefringence from reprocessed WMAP and Planck LFI data](http://arxiv.org/abs/2305.02268)
+2. [Cosmic Birefringence from Planck Data Release 4](https://arxiv.org/abs/2201.07682)
+3. [Improved Constraints on Cosmic Birefringence from the WMAP and Planck Cosmic Microwave Background Polarization Data](https://arxiv.org/abs/2205.13962)
+4. [Cosmoglobe DR1 results. II. Constraints on isotropic cosmic birefringence from reprocessed WMAP and Planck LFI data](https://arxiv.org/abs/2305.02268)
 
 #### Forecast works
 
