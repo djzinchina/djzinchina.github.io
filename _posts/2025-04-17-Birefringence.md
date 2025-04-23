@@ -36,7 +36,7 @@ Here we name them as M1, M2, and M3.
 - For the denominator in the likelihood, the variance of $$C_\ell^{EB,o}-({C}_\ell^{EE,o}-{C}_\ell^{BB,o}){\tan(4\alpha)}/{2}$$, M1 uses an approximation including $${C}_\ell^{EE/BB/EB,o}$$. 
 <!-- See Physics/USTC2023AUT/birefringence_cov_mat.jpg -->
 - M2 uses NaMASTER to estimate the covariance matrices of all pairs of $${C}_\ell^{EE/BB/EB,o}$$. They validate it by comaring with that from MC simulations.
-- M3 ignores some of the covariance terms including $${C}_\ell^{EB,o}$$ given the high statistical fluctuations of $${C}_\ell^{EB,o}$$ (e.g. large fluctuations due to the large E-mode foreground, but the fg EB spectrum is not modeled).
+- M3 ignores all covariance terms including $${C}_\ell^{EB,o}$$ given the high statistical fluctuations of $${C}_\ell^{EB,o}$$ (e.g. large fluctuations due to the large E-mode foreground, but the fg EB spectrum is not modeled). They ignore the off-diagonal elements in the covariance matrix since they incorporate $${C}_\ell^{EB,o}{C}_\ell^{XY,o}$$ terms.
 - M2 introduces a dust EB spectrum parameterized by a rotation angle $$\gamma$$. To test if the method can determine $$\gamma$$, they prepare a Gaussian dust foreground map with given $${C}_\ell^{EE/BB/EB,fg}$$. They then fit $$\alpha$$ and $$\gamma$$ simultaneously, which successfully recover the input values.
 - M1 and M3 both ignore the foreground EB correlation.
 - These works do not use simulations of data splits.
@@ -66,7 +66,7 @@ $$
 $$
 
 - Note that the dust EB model is only used for the cross spectra of two dust-dominated channels ($$\nu\gtrsim90$$GHz). If one (or two) of them is a synchrotron-dominated channel we assume the fg EB correlations are negligible.
-- They compute the covariance matrices in the same way as M3.
+- They compute the covariance matrices in the same way as M3 (but introduce the dust EB model).
 
 #### Validation works
 
@@ -76,9 +76,10 @@ Here we name it D1.
 
 - This validation work takes *Commander* PR4 sky model as a template for polarized fg to compute the intrinsic fg EB $$A{C}_\ell^{EB,fg}$$, leaving its amplitude $$A$$ to fit. They use Commander SEDs to scale it to other frequencies. (You can also fit different $$A_\nu$$‘s for each band.)
 - This approach, called the ‘Commander template’ method, warrants a couple of caveats, since the noise and systematics in the Commander template may lead to a spurious EB signal.
-- To speed up the calculation, they first estimate the maximum likelihood solution analytically, applying the small-angle approximation. Then they recalculate the best-fit solution, which converges soon.
-- They use NPIPE CMB+N simulations to test the robustness of the method against instrumental systematics (other than miscalibration angles). They use NPIPE CMB+FG+N simulations (where FG adopts the Commander sky model), rotated by randomly sampled $$\alpha_\nu$$ and $$\beta$$, to validate the method.
-- They find the systematic effects including cross-polarization (E-B leakage) and beam leakage (T-P leakage) cause the spurious EB signal in CMB+N simulations.
+- To speed up the calculation, they first estimate the maximum likelihood solution analytically, applying the small-angle approximation. Then they recalculate the best-fit solution, which converges fast.
+- They compute the covariance matrix in a full form. It includes not only the observed covariance terms $${\rm Cov}({C}_\ell^{XY,o},{C}_\ell^{ZW,o})$$, but also the CMB and fg correlation terms. It considers all terms including $${C}_\ell^{EB,o}{C}_\ell^{XY,o}$$ terms.
+- They use NPIPE CMB+N simulations to test the robustness of the method against instrumental systematics (other than miscalibration angles). They use NPIPE CMB+FG+N simulations (where the Commander sky model is adopted in FG), rotated by randomly sampled $$\alpha_\nu$$ and $$\beta$$, to validate the methodology.
+- They find the systematic effects including cross-polarization (E-B leakage) and beam leakage (T-P leakage) cause the spurious EB signal in CMB+N simulations, and lead to bias in estimation of $$\alpha_{100A/B}$$.
 - For a future experiment with a high S/N of E-mode measurements, we might include the auto spectra. But here, to avoid the noise bias in EE auto spectra, we better use cross spectra only. 
 
 #### Forecast works
@@ -87,9 +88,9 @@ Here we name it L1.
 
 1. [LiteBIRD Science Goals and Forecasts: constraining isotropic cosmic birefringence](https://arxiv.org/abs/2503.22322)
 
-- The LiteBIRD Forecast work takes the MK’s method as a choice among 5 methods, but with a bit of changes.
+- The LiteBIRD Forecast work takes the MK’s method as a choice among five methods, but with a bit of changes.
 - In fg EB spectrum model, they consider both synchrotron and dust, and their correlation. They compute their spectrum from the templates produced by parametric component separation methods (specifically, they use d0s0 and d1s1 models), and fit the amplitudes $$A^{\rm sync/dust/sync\times dust}$$.
 - In their simulations, they use d0s0 and d1s1, which means the models that generated the simulations are also used as the templates in the MK estimator.
 - They also show a small bias if using the s0 model in MK to apply estimation on simulations of s1, while d0 could well descirbe d1 in terms of its EB correlation.
-- The assumptions like the Gaussian likelihood may fall for higher S/N data.
-- They use the same semi-analytical method as D1 to estimate the maximum likelihood solution.
+- The assumptions such as the Gaussian likelihood may fall for higher S/N data.
+- They use the same semi-analytical method as D1 to estimate the maximum likelihood solution. Unlike D1, the covariance matrix ignores the $$(\sin x){C}_\ell^{EB,o}{C}_\ell^{XY,o}$$ terms.
