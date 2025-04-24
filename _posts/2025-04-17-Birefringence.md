@@ -52,7 +52,7 @@ Here we name them as W1, W2, and W3.
 - W1 uses PR3 half-mission (HM) maps and thus they fit one miscalibration angle $$\alpha_\nu$$ for two HM maps of each frequency. They compute cross spectra $$C_\ell^{EE/BB/EB/BE/...}$$ of 16 pairs ($$\nu$$,HM1)x($$\nu$$,HM2).
 - W2/3 use PR4 A/B maps (full-mission, but half of the detector sets on the focal plane). Each split has an independent miscalibration angle. They compute cross spectra of 28 pairs.
 - The masks are produced by masking 1) bad pixels that were not observed by any detectors, 2) bright CO emssion regions to reduce T-P leakage due to the bandpass mismatch, 3) point sources from the union of PR2 100/143/217/353 GHz PS masks. Using different Galactic masks, the final fsky ranges from 63% to 93%.
-- W1 finds $$\beta=0.35\pm0.14 \deg$$ (68% C.L.) without assuming the fg EB spectrum. They use QuickPol method to remove the T-P leakage (while PR4 corrects it by fitting time-domain templates). They validate by CMB+N FFP10 simulations (they can only estimate $$\alpha_\nu+\beta$$ without fg) with input $$\alpha_\nu=\beta=0$$. They expect to estimate $$\alpha_\nu=0$$ by setting $$\beta=0$$, or vice versa.
+- W1 found $$\beta=0.35\pm0.14 \deg$$ (68% C.L.) without assuming the fg EB spectrum. They use QuickPol method to remove the T-P leakage (while PR4 corrects it by fitting time-domain templates). They validate by CMB+N FFP10 simulations (we can only estimate $$\alpha_\nu+\beta$$ without fg) with input $$\alpha_\nu=\beta=0$$. They expect to estimate $$\alpha_\nu=0$$ by setting $$\beta=0$$, or vice versa.
 - W2/3 both assume a dust EB spectrum model. We hereafter call it the ‘**filament model**’. W3 makes a small change from W2: W3 does not require multiplying a noisy factor $$C_\ell^{EE, \rm dust}/(C_\ell^{EE, \rm dust}-C_\ell^{BB, \rm dust})$$ estimated from 353 GHz. They both fit the frequency-dependent amplitudes $$A_\ell$$ for 4 multipole ranges. Specifically, the dust EB spectrum is modeled as:
 
 $$
@@ -74,10 +74,10 @@ Here we name it D1.
 
 1. [Robustness of cosmic birefringence measurement against Galactic foreground emission and instrumental systematics](https://arxiv.org/abs/2210.07655)
 
-- This validation work takes *Commander* PR4 sky model as a template for polarized fg to compute the intrinsic fg EB $$A{C}_\ell^{EB,fg}$$, leaving its amplitude $$A$$ to fit. They use Commander SEDs to scale it to other frequencies. (You can also fit different $$A_\nu$$‘s for each band.)
+- This validation work takes *Commander* PR4 sky model as a template for polarized fg to compute the intrinsic fg EB $$A{C}_\ell^{EB,fg}$$, leaving its amplitude $$A$$ to fit. They use Commander SEDs to scale it to other frequencies. (You can also fit different $$A_\nu$$‘s for each band.) They adopt the same Commander sky model in fg simulations.
 - This approach, called the ‘Commander template’ method, warrants a couple of caveats, since the noise and systematics in the Commander template may lead to a spurious EB signal.
 - To speed up the calculation, they first estimate the maximum likelihood solution analytically, applying the small-angle approximation. Then they recalculate the best-fit solution, which converges fast.
-- They compute the covariance matrix in a full form. It includes not only the observed covariance terms $${\rm Cov}({C}_\ell^{XY,o},{C}_\ell^{ZW,o})$$, but also the CMB and fg correlation terms. It considers all terms including $${C}_\ell^{EB,o}{C}_\ell^{XY,o}$$ terms.
+- They compute the covariance matrix in a full form. It includes not only the observed covariance terms $${\rm Cov}({C}_\ell^{XY,o},{C}_\ell^{ZW,o})$$, but also the CMB and fg correlation terms. It considers all terms including $${C}_\ell^{EB,o}{C}_\ell^{XY,o}$$ terms. **Warning**: the CMB-related terms should be excluded because the best-fit LCDM spectra are used as the CMB EE and BB spectra. But this makes no difference since the fg terms dominate over the CMB terms in the covariance.
 - They use NPIPE CMB+N simulations to test the robustness of the method against instrumental systematics (other than miscalibration angles). They use NPIPE CMB+FG+N simulations (where the Commander sky model is adopted in FG), rotated by randomly sampled $$\alpha_\nu$$ and $$\beta$$, to validate the methodology.
 - They find the systematic effects including cross-polarization (E-B leakage) and beam leakage (T-P leakage) cause the spurious EB signal in CMB+N simulations, and lead to bias in estimation of $$\alpha_{100A/B}$$.
 - For a future experiment with a high S/N of E-mode measurements, we might include the auto spectra. But here, to avoid the noise bias in EE auto spectra, we better use cross spectra only. 
@@ -93,4 +93,4 @@ Here we name it L1.
 - In their simulations, they use d0s0 and d1s1, which means the models that generated the simulations are also used as the templates in the MK estimator.
 - They also show a small bias if using the s0 model in MK to apply estimation on simulations of s1, while d0 could well descirbe d1 in terms of its EB correlation.
 - The assumptions such as the Gaussian likelihood may fall for higher S/N data.
-- They use the same semi-analytical method as D1 to estimate the maximum likelihood solution. Unlike D1, the covariance matrix ignores the $$(\sin x){C}_\ell^{EB,o}{C}_\ell^{XY,o}$$ terms.
+- They use the same semi-analytical method as D1 to estimate the maximum likelihood solution. Unlike D1 which used the full form of the covariance matrix, they ignore all $$(\sin x){C}_\ell^{EB,o}{C}_\ell^{XY,o}$$ terms.
