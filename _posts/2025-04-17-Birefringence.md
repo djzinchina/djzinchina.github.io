@@ -82,6 +82,12 @@ Here we name it D1.
 - They find the systematic effects including cross-polarization (E-B leakage) and beam leakage (T-P leakage) cause the spurious EB signal in CMB+N simulations, and lead to bias in estimation of $$\alpha_{100A/B}$$.
 - For a future experiment with a high S/N of E-mode measurements, we might include the auto spectra. But here, to avoid the noise bias in EE auto spectra, we better use cross spectra only. 
 
+> A bit tedious details:
+>
+> If you use [NaMaster](https://namaster.readthedocs.io/en/latest/index.html) to compute the cross power spectra, you should take care about when to decouple the binned pseudo-$$C_\ell$$ and covariance, to account for the masking effect. As indicated in the [tutorial of NaMaster](https://namaster.readthedocs.io/en/latest/3Covariances.html), it is more appropriate to compute the Gaussian covariance using the $$f_{\rm sky}$$-corrected, mode-coupled power spectrum as input, instead of the decoupled or true power spectrum. Therefore, when calculating the covariance matrix, we can simply compute the pseudo-$$C_\ell$$ and divide it by $$f_{\rm sky}$$. After that we bin it to get the binned covariance. For the other binned cross power spectra used in the likelihood, they can be computed by `decouple_cell` of NaMaster before you implement the birefringence estimation pipeline.
+>
+{: .prompt-tip }
+
 #### Forecast works
 
 Here we name it L1.
