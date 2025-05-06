@@ -84,9 +84,11 @@ Here we name it D1.
 
 > A bit tedious details:
 >
-> If you use [NaMaster](https://namaster.readthedocs.io/en/latest/index.html) to compute the cross power spectra, you should take care about when to decouple the binned pseudo-$$C_\ell$$ and covariance, to account for the masking effect. As indicated in the [tutorial of NaMaster](https://namaster.readthedocs.io/en/latest/3Covariances.html), it is more appropriate to compute the Gaussian covariance using the $$f_{\rm sky}$$-corrected, mode-coupled power spectrum as input, instead of the decoupled or true power spectrum. Therefore, when calculating the covariance matrix, we can simply compute the pseudo-$$C_\ell$$ and divide it by $$f_{\rm sky}$$. After that we bin it to get the binned covariance. For the other binned cross power spectra used in the likelihood, they can be computed by `decouple_cell` of NaMaster before you implement the birefringence estimation pipeline.
+> If you use [NaMaster](https://namaster.readthedocs.io/en/latest/index.html) to compute the cross power spectra, you should take care about when to decouple the binned pseudo-$$C_\ell$$s and covariance, to account for the masking effect. As indicated in the [tutorial of NaMaster](https://namaster.readthedocs.io/en/latest/3Covariances.html), it is more appropriate to compute the Gaussian covariance using the $$f_{\rm sky}$$-corrected, mode-coupled power spectrum as input, instead of the decoupled or true power spectrum. Therefore, when calculating the covariance matrix, we can simply compute the pseudo-$$C_\ell$$ and divide it by $$f_{\rm sky}$$. After that we bin it to get the binned covariance. For the other binned cross power spectra used in the likelihood, they can be computed by `decouple_cell` of NaMaster before you implement the birefringence estimation pipeline.
 >
-{: .prompt-tip }
+> D1 used NaMaster to compute full-sky $$C_\ell$$s without performing any E/B mode purification.
+>
+> {: .prompt-tip }
 
 #### Forecast works
 
