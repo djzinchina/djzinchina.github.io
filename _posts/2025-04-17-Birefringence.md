@@ -88,7 +88,7 @@ Here we name it D1.
 >
 > D1 used NaMaster to compute full-sky $$C_\ell$$s without performing any E/B mode purification.
 >
-> {: .prompt-tip }
+{: .prompt-tip }
 
 #### Forecast works
 
