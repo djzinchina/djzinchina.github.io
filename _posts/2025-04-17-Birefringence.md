@@ -102,3 +102,7 @@ Here we name it L1.
 - They also show a small bias if using the s0 model in MK to apply estimation on simulations of s1, while d0 could well descirbe d1 in terms of its EB correlation.
 - The assumptions such as the Gaussian likelihood may fall for higher S/N data.
 - They use the same semi-analytical method as D1 to estimate the maximum likelihood solution. Unlike D1 which used the full form of the covariance matrix, they ignore all $$(\sin x){C}_\ell^{EB,o}{C}_\ell^{XY,o}$$ terms.
+
+> There is a typo of $$A_{\beta, \alpha_n}$$ term in (A.3) of L1. It should be as (A.12) of D1.
+>
+{: .prompt-tip }
