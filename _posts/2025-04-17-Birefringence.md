@@ -10,7 +10,7 @@ math: true
 First, the observed EB spectrum (without intrinsic CMB EB correlation) can be expressed as:
 
 $$
-C_\ell^{EB,o}=\frac{\tan(4\alpha)}{2}\left({C}_\ell^{EE,o}-{C}_\ell^{BB,o}\right)+\frac{\sin(4\beta)}{2\cos(4\alpha)}\left({C}_\ell^{EE,\rm CMB}b_\ell^2-{C}_\ell^{BB,\rm CMB}b_\ell^2\right)+\frac{A}{\cos(4\alpha)}C_\ell^{EB,\rm fg}\,.
+C_\ell^{EB,\rm o}=\frac{\tan(4\alpha)}{2}\left({C}_\ell^{EE,\rm o}-{C}_\ell^{BB,\rm o}\right)+\frac{\sin(4\beta)}{2\cos(4\alpha)}\left({C}_\ell^{EE,\rm CMB}b_\ell^2-{C}_\ell^{BB,\rm CMB}b_\ell^2\right)+\frac{A}{\cos(4\alpha)}C_\ell^{EB,\rm fg}\,.
 $$
 
 The most commonly used method of estimating the birefringence angle, which we call the MK’s method (firstly introduced by Minami & Komatsu), is a Maximum Likelihood Estimator to simultaneously estimate $$\alpha_\nu$$ for all frequency bands and $$\beta$$ (and the amplitude of fg EB correlations).
