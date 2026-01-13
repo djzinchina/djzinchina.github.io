@@ -1,5 +1,5 @@
 ---
-title: Forecasts of dipole modulation: local variance asymmetry
+title: Forecasts of dipole modulation --- local variance asymmetry
 description: Papers about the anomaly of hemispherical asymmetry tested with the local variance estimator using future CMB data.
 date: 2026-01-13 21:07:00 +0800
 categories: [CMB]
@@ -20,15 +20,18 @@ It is still unclear whether the anomalies are simply statistical excursions (unu
 
 #### CLASS forecasts
 
-[Testing CMB Anomalies in E-mode Polarization with Current and Future Data](https://arxiv.org/abs/2206.05920)
+[Shi et al. 2023](https://arxiv.org/abs/2206.05920)
 
-- They 
+- Simulations: CMB realizations from *Planck* best-fit ΛCDM model plus $15\ \mu{\rm K}\cdot{\rm arcmin}$ white noise. Ideal case: full-sky analyses with $2\ \mu{\rm K}\cdot{\rm arcmin}$ white noise for temperature and $0.02\ \mu{\rm K}\cdot{\rm arcmin}$ white noise for polarization. Special CMB: one CMB realization with PTEs of all E-mode anomaly estimators are over 95% or below 5%, to distinguish the CMB’s and noise’s contribution to the distributions. Constrained universe: sample E/B components from full-sky *Planck* SMICA data.
+- Mask: *Planck* common mask combined with CLASS survey region of $$-70^\circ<{\rm DEC}<30^\circ$$. The E-mode mask is derived from the Q/U polarization mask by thresholding E/B residuals to reduce E/B mixing error due to masking.
+- Results: The results for the constrained universe are largely consistent with those for the unconstrained ones.
+- Conclusions: the current SMICA-based constraints are noise dominated for E-mode hemispherical power asymmetry, but the situation will improve with future CLASS (LiteBIRD) data by a factor of 2 (3). The localization of the variance dipole extracted from the Special CMB improves from 30% of the sky for *Planck* SMICA to 15% for CLASS. The localization depends on both the dipole amplitude and orientation with respect to masks and high-noise regions.
 
 #### LiteBIRD forecasts
 
-[LiteBIRD Science Goals and Forecasts. E-mode Anomalies](https://arxiv.org/abs/2508.16451)
+[Banday et al. 2025](https://arxiv.org/abs/2508.16451)
 
-- Two simulation sets: unconstrained simulations are isotropic CMB generated from *Planck* 2018 baseline cosmological model (with FFP10 noise simulations added to only temperature maps for consistency); constrained E-mode simulations are generated from the inpainted *Planck* 2018 SMICA temperature maps. (Unconstrained temperature realizations are also inpainted for consistency.) No instrumental noise or foreground residuals are included in E-mode simulations to maximize the detection possibility.
+- Two simulation sets: unconstrained simulations are isotropic CMB generated from *Planck* 2018 baseline ΛCDM model (with FFP10 noise simulations added to only temperature maps for consistency); constrained E-mode simulations are generated from the inpainted *Planck* 2018 SMICA temperature maps. (Unconstrained temperature realizations are also inpainted for consistency.) No instrumental noise or foreground residuals are included in E-mode simulations to maximize the detection possibility.
 
 - Mask: E-mode inpainting mask with $$f_{\rm sky}=83.9\%$$ at $$N_{\rm side}=64$$.
 
