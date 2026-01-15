@@ -10,7 +10,7 @@ math: true
 Dipole modulation, or hemispherical power asymmetry (HPA), was first discovered in *WMAP* temperature data. Subsequently, a power modulation of 7% at a direction around $$(209^\circ, -15^\circ)$$, being consistent between several estimation methods, was found in *Planck* temperature data with a significance approaching $$3\ \sigma$$. In a simplest way, one can calculate the local variance of the temperature map to estimate the dipole modulated in the isotropic CMB signal:
 $$
 T(\hat n)=\tilde T(\hat n)[1+A\hat\lambda \cdot\hat n]\,,\\
-\sigma^2_r(\hat n)=\sum_{i\in\bigodot_r}\big[T(\hat i)-\overline{T}(\hat i)\big]^2\approx\tilde \sigma_r^2(\hat n)[1+2A\hat\lambda \cdot\hat n]\,.
+\sigma^2_r(\hat n)=\frac{1}{N_{i}}\sum_{i\in\bigodot_r}\big[T(\hat i)-\overline{T}(\hat i)\big]^2\approx\tilde \sigma_r^2(\hat n)[1+2A\hat\lambda \cdot\hat n]\,,
 $$
 where $$\tilde T$$ is the isotropic CMB, $$A\hat\lambda$$ is the dipole, $$\sigma_r^2$$ is defined as the local variance map (LVM), and $i$ includes all pixels within an $$r\gtrsim4^\circ$$ circular area centered at $$\hat n$$.
 
