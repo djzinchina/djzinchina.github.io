@@ -5,8 +5,9 @@ categories: [About me]
 tags: [Publications]     # TAG names should always be lowercase
 ---
 
-## Articles (until Feb. 2026)
+## Articles (until Jul. 2026)
 
+- **J. Dou**\* and W. Zhao, “*Forecasts of CMB $E$-mode anomalies for AliCPT-1*”, JCAP, 2026, 07: 101. [arXiv:2604.20699](https://arxiv.org/abs/2604.20699).
 - **J. Dou**\* and W. Zhao, “*Forecasts of constraining isotropic cosmic birefringence on AliCPT-1*”, JCAP, 2026, 02: 079. [arXiv:2510.21221](https://arxiv.org/abs/2510.21221).
 - **J. Dou**\*, J. Han, W. Zhao and B. Hu, “*Forecasts of effects of beam systematics and deprojection on the third generation ground-based cosmic microwave background experiment*”, A&A, 2025, 694: A198. [arXiv: 2412.20415](https://arxiv.org/abs/2412.20415).
 - **J. Dou**\*, S. Ghosh, L. Santos and W. Zhao, “*Forecast of CMB TB and EB correlations for AliCPT-1*”, JCAP, 2024, 10: 046. [arXiv: 2403.19222](https://arxiv.org/abs/2403.19222).
